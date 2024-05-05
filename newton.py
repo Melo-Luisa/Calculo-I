@@ -7,7 +7,7 @@ def calcular_funcao(expressao, x):
 
 #calcula a derivada
 def calcular_derivada(expressao, x):
-    h = 10**-5
+    h = 10**-8
     derivada =(calcular_funcao(expressao, x+h) - calcular_funcao(expressao, x))/h
 
     return derivada
