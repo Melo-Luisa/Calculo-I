@@ -23,10 +23,10 @@ def metodo_newton(expressao, chute):
 
 def main():
     expressao = input("Digite a expressão da função (por exemplo, x**2):")
-    chute = float(input("Digite o seu chute:"))
+    chute = int(input("Digite o seu chute:"))
     resultado = metodo_newton(expressao, chute)
 
-    if(resultado <= chute):
+    if(resultado < chute):
         print("Chutou alto...")
     else:
         print("Chutou baixo\n")
@@ -38,3 +38,25 @@ def main():
 if __name__ == "__main__":
     main()
 
+######OUTPUT########
+
+1º tentativa:
+Digite a expressão da função (por exemplo, x**2):x**2-4
+Digite o seu chute:5
+Numero de interações foi: 5
+Chutou alto...
+>>> O resultado aproximado da raiz é:2.000000
+
+2º Tentativa:
+Digite a expressão da função (por exemplo, x**2):x**2
+Digite o seu chute:3
+Numero de interações foi: 10
+Chutou alto...
+>>> O resultado aproximado da raiz é:0.002930
+
+3º Tentativa:
+Digite a expressão da função (por exemplo, x**2):x**4+x**3-25
+Digite o seu chute:55
+Numero de interações foi: 15
+Chutou alto...
+>>> O resultado aproximado da raiz é:2.022383
